@@ -14,6 +14,7 @@ namespace QStudy_Hub
 {
     public partial class Dashboard : Form
     {
+        //In case of rounded corners for the form
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -27,8 +28,6 @@ namespace QStudy_Hub
         public Dashboard(string username)
         {
             InitializeComponent();
-            //Rounded Form Code
-            //this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 20, 20));
             lblname.Text = username;
 
             InitializeNavigationControl();
@@ -37,17 +36,13 @@ namespace QStudy_Hub
         private void InitializeNavigationControl()
         {
             pnlmain.Controls.Clear();
-            UC_Home control = new UC_Home();
+            UC_Home control = new UC_Home(); // Using the user control for home page
             control.Dock = DockStyle.Fill;
             pnlmain.Controls.Add(control);
 
-            //List<UserControl> userControl = new List<UserControl>()
-            //{ new UC_Courses(), new UC_Calendar()};
-
-            //navigationControl = new NavigationControl(userControl, pnlmain);
         }
 
-        private void loadView(UserControl uc)
+        private void loadView(UserControl uc) // Method to load the user control into the main panel
         {
             pnlmain.Controls.Clear();
             uc.Dock = DockStyle.Fill;
@@ -64,7 +59,7 @@ namespace QStudy_Hub
         private void btncourse_Click(object sender, EventArgs e)
         {
             pnlmain.Controls.Clear();
-            UC_Courses control = new UC_Courses();
+            UC_Courses control = new UC_Courses(); //Using the user control for courses page
             control.Dock = DockStyle.Fill;
             pnlmain.Controls.Add(control);
         }
@@ -72,7 +67,7 @@ namespace QStudy_Hub
         private void btncalendar_Click(object sender, EventArgs e)
         {
             pnlmain.Controls.Clear();
-            UC_Calendar control = new UC_Calendar();
+            UC_Calendar control = new UC_Calendar();// Using the user control for calendar page
             control.Dock = DockStyle.Fill;
             pnlmain.Controls.Add(control);
         }
@@ -100,17 +95,17 @@ namespace QStudy_Hub
         private void btnhome_Click(object sender, EventArgs e)
         {
             pnlmain.Controls.Clear();
-            UC_Home control = new UC_Home();
+            UC_Home control = new UC_Home(); // Using the user control for home page
             control.Dock = DockStyle.Fill;
             pnlmain.Controls.Add(control);
 
         }
 
-        private void sidebartimer_Tick(object sender, EventArgs e)
+        private void sidebartimer_Tick(object sender, EventArgs e) // Animation of the sidebar when Menu is clicked
         {
             if (sidebarExpand)
             {
-                pnlnav.Width -= 15;
+                pnlnav.Width -= 15; // Adjust speed of the sidebar animation
 
                 if (pnlnav.Width <= pnlnav.MinimumSize.Width)
                 {
@@ -120,7 +115,7 @@ namespace QStudy_Hub
             }
             else
             {
-                pnlnav.Width += 15;
+                pnlnav.Width += 15; // Adjust speed of the sidebar animation
 
                 if (pnlnav.Width >= pnlnav.MaximumSize.Width)
                 {
@@ -130,7 +125,7 @@ namespace QStudy_Hub
             }
         }
 
-        private void btnmenu_Click(object sender, EventArgs e)
+        private void btnmenu_Click(object sender, EventArgs e) //Sidebar menu button
         {
             sidebartimer.Start();
         }

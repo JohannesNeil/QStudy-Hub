@@ -190,11 +190,11 @@
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.Font = new Font("SimSun-ExtG", 13F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnExit.ForeColor = Color.Red;
+            btnExit.Image = (Image)resources.GetObject("btnExit.Image");
             btnExit.Location = new Point(582, 0);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(38, 41);
             btnExit.TabIndex = 5;
-            btnExit.Text = "X";
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
             // 
