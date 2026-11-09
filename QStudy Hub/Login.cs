@@ -4,25 +4,18 @@ namespace QStudy_Hub
 {
     public partial class Login : Form
     {
-        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-        private static extern IntPtr CreateRoundRectRgn
-        (
-         int nLeftRect, int nTopRect, int nRightRect, int nBottomRect,
-         int nWidthEllipse, int nHeightEllipse
-         );
-
-
 
         public Login()
         {
             InitializeComponent();
-            //Rounded Form Code
-            //this.Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, this.Width, this.Height, 20, 20));
+            
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            string username = "Johannes Neil Sustitudo";
+            //Use for test login credentials
+            //Change with database connection later
+            string username = "username";
             string pass = "pass";
 
             if (username == txtusername.Text && pass == txtpass.Text)
@@ -38,15 +31,18 @@ namespace QStudy_Hub
             }
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e) //Exit Button
         {
             this.Close();
         }
 
+        private void btnsignin_Click(object sender, EventArgs e) //Direct to Signin form
+        {
+            this.Hide();
+            Signin sn = new Signin();
+            sn.ShowDialog();
+            this.Close();
+        }
 
-        //private void label2_Click(object sender, EventArgs e)
-        //{
-
-        //}
     }
 }

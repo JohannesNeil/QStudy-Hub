@@ -36,18 +36,18 @@
             pictureBox1 = new PictureBox();
             label2 = new Label();
             panel1 = new Panel();
-            pictureBox2 = new PictureBox();
+            pbusername = new PictureBox();
             panel2 = new Panel();
-            pictureBox3 = new PictureBox();
+            pbpassword = new PictureBox();
             panel3 = new Panel();
             label3 = new Label();
             panel4 = new Panel();
             btnExit = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbusername).BeginInit();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbpassword).BeginInit();
             SuspendLayout();
             // 
             // txtusername
@@ -95,6 +95,7 @@
             btnsignin.TabIndex = 3;
             btnsignin.Text = "Sign In";
             btnsignin.UseVisualStyleBackColor = false;
+            btnsignin.Click += btnsignin_Click;
             // 
             // pictureBox1
             // 
@@ -120,27 +121,27 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(pbusername);
             panel1.Controls.Add(txtusername);
             panel1.Location = new Point(59, 203);
             panel1.Name = "panel1";
             panel1.Size = new Size(243, 34);
             panel1.TabIndex = 8;
             // 
-            // pictureBox2
+            // pbusername
             // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(213, 3);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(17, 17);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 10;
-            pictureBox2.TabStop = false;
+            pbusername.BackColor = Color.Transparent;
+            pbusername.Image = (Image)resources.GetObject("pbusername.Image");
+            pbusername.Location = new Point(213, 3);
+            pbusername.Name = "pbusername";
+            pbusername.Size = new Size(17, 17);
+            pbusername.SizeMode = PictureBoxSizeMode.Zoom;
+            pbusername.TabIndex = 10;
+            pbusername.TabStop = false;
             // 
             // panel2
             // 
-            panel2.Controls.Add(pictureBox3);
+            panel2.Controls.Add(pbpassword);
             panel2.Controls.Add(txtpass);
             panel2.Controls.Add(panel3);
             panel2.Location = new Point(59, 243);
@@ -148,16 +149,16 @@
             panel2.Size = new Size(243, 34);
             panel2.TabIndex = 9;
             // 
-            // pictureBox3
+            // pbpassword
             // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(213, 4);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(17, 17);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 10;
-            pictureBox3.TabStop = false;
+            pbpassword.BackColor = Color.Transparent;
+            pbpassword.Image = (Image)resources.GetObject("pbpassword.Image");
+            pbpassword.Location = new Point(213, 4);
+            pbpassword.Name = "pbpassword";
+            pbpassword.Size = new Size(17, 17);
+            pbpassword.SizeMode = PictureBoxSizeMode.Zoom;
+            pbpassword.TabIndex = 10;
+            pbpassword.TabStop = false;
             // 
             // panel3
             // 
@@ -192,11 +193,11 @@
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.Font = new Font("Segoe UI Emoji", 13F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnExit.ForeColor = Color.FromArgb(192, 0, 0);
+            btnExit.Image = (Image)resources.GetObject("btnExit.Image");
             btnExit.Location = new Point(315, 12);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(32, 31);
             btnExit.TabIndex = 12;
-            btnExit.Text = "X";
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
             // 
@@ -226,10 +227,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbusername).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbpassword).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -243,9 +244,9 @@
         private PictureBox pictureBox1;
         private Label label2;
         private Panel panel1;
-        private PictureBox pictureBox2;
+        private PictureBox pbusername;
         private Panel panel2;
-        private PictureBox pictureBox3;
+        private PictureBox pbpassword;
         private Panel panel3;
         private Label label3;
         private Panel panel4;
