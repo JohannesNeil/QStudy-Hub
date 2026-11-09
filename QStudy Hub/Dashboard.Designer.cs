@@ -47,12 +47,12 @@
             ((System.ComponentModel.ISupportInitialize)picboxstudimage).BeginInit();
             pnluserinfo.SuspendLayout();
             pnlmain.SuspendLayout();
-            pnlheader.SuspendLayout();
             SuspendLayout();
             // 
             // pnlnav
             // 
             pnlnav.BackColor = Color.FromArgb(70, 75, 113);
+            pnlnav.Controls.Add(btnExit);
             pnlnav.Controls.Add(picboxstudimage);
             pnlnav.Controls.Add(btnhome);
             pnlnav.Controls.Add(btncourse);
@@ -184,17 +184,19 @@
             // 
             btnExit.BackColor = Color.Transparent;
             btnExit.BackgroundImageLayout = ImageLayout.None;
-            btnExit.Dock = DockStyle.Right;
             btnExit.FlatAppearance.BorderSize = 0;
             btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 138, 178);
             btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.Font = new Font("SimSun-ExtG", 13F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnExit.ForeColor = Color.Red;
-            btnExit.Location = new Point(582, 0);
+            btnExit.Font = new Font("Leelawadee UI", 10F);
+            btnExit.ForeColor = Color.White;
+            btnExit.Image = (Image)resources.GetObject("btnExit.Image");
+            btnExit.ImageAlign = ContentAlignment.MiddleLeft;
+            btnExit.Location = new Point(21, 417);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(38, 41);
+            btnExit.Size = new Size(183, 34);
             btnExit.TabIndex = 5;
-            btnExit.Text = "X";
+            btnExit.Text = "     Logout";
+            btnExit.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
             // 
@@ -220,7 +222,6 @@
             // pnlheader
             // 
             pnlheader.BackColor = Color.White;
-            pnlheader.Controls.Add(btnExit);
             pnlheader.Dock = DockStyle.Top;
             pnlheader.Location = new Point(227, 0);
             pnlheader.Name = "pnlheader";
@@ -256,7 +257,6 @@
             pnluserinfo.ResumeLayout(false);
             pnlmain.ResumeLayout(false);
             pnlmain.PerformLayout();
-            pnlheader.ResumeLayout(false);
             ResumeLayout(false);
         }
 

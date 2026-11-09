@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADESURBVDhPzZNBCsIwEEUDCh7EpTfQY+lKTyAVPEK9hYqC
+        6FI8gBu9gy5dNL4pg1QSp7GrPniUzCQfUjKuvXjvOzjBNe5+uMK+HonDBgkp8IyxkD0+8I5dPRZCc4sX
+        XUahP8Qj9rQUQvMg6rI5qUHsueJclyF/BGUoLLX0DY1PEN8BbjD208UXCrPycBWKTYKm5eEqFFOvtpAE
+        qL+aBXvkHWW6DEkNqoWQlAc5whOaDzJlRJ54Q3NEZGjHaA1tjvbQtgTn3rHve865v2h3AAAAAElFTkSu
+        QmCC
+</value>
+  </data>
   <data name="picboxstudimage.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -191,7 +201,7 @@
   <data name="btnhome.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAMtJREFUOE/tjjEKwkAQRbewEVsLLxA8gJ0ewEIrD2FpG8gZJFews/MOYmUvegML
+        DAAACwwBP0AiyAAAAMtJREFUOE/tjjEKwkAQRbewEVsLLxA8gJ0ewEIrD2FpG8gZJFews/MOYmUvegML
         G3sRXP/PTqI7GpYslj54kP0z84kJYa2dUXk2B8ctuIQPkd/MunAA+7JaD5Z6cAs1zIbwCHey/h0sjOAZ
         1sHZGC7k5BMM5/AGQ9xhKmcvELbhihsNWcNOWZLAA9NIeJuwaAo3TCLh7aT8q7yI4siLEsKHy6IIFl1g
         qmSmCRadZFzBzI08/kVvMHMjD68og1flXsYVzNQOzWT8C4x5Al19PFqLSSYjAAAAAElFTkSuQmCC
