@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             pnlnav = new Panel();
+            btnExit = new Button();
             picboxstudimage = new PictureBox();
             btnhome = new Button();
             btncourse = new Button();
@@ -38,7 +39,6 @@
             btncalendar = new Button();
             pnluserinfo = new Panel();
             btnmenu = new Button();
-            btnExit = new Button();
             pnlmain = new Panel();
             label1 = new Label();
             pnlheader = new Panel();
@@ -66,6 +66,26 @@
             pnlnav.Name = "pnlnav";
             pnlnav.Size = new Size(227, 482);
             pnlnav.TabIndex = 1;
+            // 
+            // btnExit
+            // 
+            btnExit.BackColor = Color.Transparent;
+            btnExit.BackgroundImageLayout = ImageLayout.None;
+            btnExit.FlatAppearance.BorderSize = 0;
+            btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 138, 178);
+            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.Font = new Font("Leelawadee UI", 10F);
+            btnExit.ForeColor = Color.White;
+            btnExit.Image = (Image)resources.GetObject("btnExit.Image");
+            btnExit.ImageAlign = ContentAlignment.MiddleLeft;
+            btnExit.Location = new Point(21, 417);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(183, 34);
+            btnExit.TabIndex = 5;
+            btnExit.Text = "     Logout";
+            btnExit.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnExit.UseVisualStyleBackColor = false;
+            btnExit.Click += btnExit_Click;
             // 
             // picboxstudimage
             // 
@@ -179,26 +199,6 @@
             btnmenu.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnmenu.UseVisualStyleBackColor = true;
             btnmenu.Click += btnmenu_Click;
-            // 
-            // btnExit
-            // 
-            btnExit.BackColor = Color.Transparent;
-            btnExit.BackgroundImageLayout = ImageLayout.None;
-            btnExit.FlatAppearance.BorderSize = 0;
-            btnExit.FlatAppearance.MouseOverBackColor = Color.FromArgb(17, 138, 178);
-            btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.Font = new Font("Leelawadee UI", 10F);
-            btnExit.ForeColor = Color.White;
-            btnExit.Image = (Image)resources.GetObject("btnExit.Image");
-            btnExit.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExit.Location = new Point(21, 417);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(183, 34);
-            btnExit.TabIndex = 5;
-            btnExit.Text = "     Logout";
-            btnExit.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click;
             // 
             // pnlmain
             // 

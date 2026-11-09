@@ -234,19 +234,6 @@
         RsxoKhoFgxIwMAAArxPbXfvoHrkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnExit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAYpJREFUWEftlrtKxEAYRuO98AI22riCKBYKgiAoCLKCNoqNF1TEa6GNnVp4wW1U
-        BBuxEnwAsRfEt/N8k102q5swk4ygkAOHnQkh801m9p8EOTn/gQ6cxDlHp7ATU9OMd/iGZ3jo6Am+4gO2
-        oDOPuIoKsoQruGbpGFZYwOewaU8BX7AVNZt2zMITDodNOzSLTdSs23QhI3qDe2HTDt2sjbRsetnRJj4O
-        m3bEBWhCrWkcvahli6K+twDakFe4a3q1jOA9jppelWn0FkDov32B0RAavIQzplfLLHoNIKIhkgYXE+g9
-        gFCI87JxgwvVhF8JoJlfowLs6EIMeob3ACoql1hEFSmV6gOsh/cA0cErJIXwGkBVUXW93pp3oTbjuOlV
-        8f4Gesq/tngP4EqqAFuoA0SHUlb0DO2XI9OzRMVD69mPi7qQknkcwlNMqhU/aMB37EPt+g3UG9Gy2Kh7
-        11G1QnvmAxvRCQ3+ifs4iN2ODuA26hlqp0Lfcvosu0GddC7eot7C9+M5J+cvEQRffPJOteGju0oAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
   <metadata name="sidebartimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
