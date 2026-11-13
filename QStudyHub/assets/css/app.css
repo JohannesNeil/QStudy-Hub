@@ -1,0 +1,28 @@
+:root {
+	--qstudy-primary: #3157d5;
+	--qstudy-ink: #1d2a44;
+}
+
+body {
+	color: var(--qstudy-ink);
+}
+
+.hero-card {
+	background: linear-gradient(135deg, #eaf0ff, #ffffff);
+	border: 1px solid #dce5ff;
+}
+
+.card {
+	border-radius: 1rem;
+}
+
+.btn-primary {
+	background-color: var(--qstudy-primary);
+	border-color: var(--qstudy-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+	background-color: #2748b4;
+	border-color: #2748b4;
+}

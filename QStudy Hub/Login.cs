@@ -4,30 +4,50 @@ namespace QStudy_Hub
 {
     public partial class Login : Form
     {
+        private readonly AuthenticationService authenticationService = new();
 
         public Login()
         {
             InitializeComponent();
-            
+            txtpass.UseSystemPasswordChar = true;
         }
 
-        private void btnlogin_Click(object sender, EventArgs e)
+        private async void btnlogin_Click(object sender, EventArgs e)
         {
-            //Use for test login credentials
-            //Change with database connection later
-            string username = "username";
-            string pass = "pass";
+            var emailOrUsername = txtusername.Text.Trim();
+            var password = txtpass.Text;
 
-            if (username == txtusername.Text && pass == txtpass.Text)
+            if (string.IsNullOrWhiteSpace(emailOrUsername) || string.IsNullOrEmpty(password))
             {
-                this.Hide();
-                Dashboard db = new Dashboard(username);
-                db.ShowDialog();
-                this.Close();
+                MessageBox.Show("Enter your email or username and password.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            try
             {
-                MessageBox.Show("Invalid Credentials");
+                btnlogin.Enabled = false;
+                var user = await authenticationService.LoginAsync(emailOrUsername, password);
+
+                if (user is null)
+                {
+                    MessageBox.Show("Invalid email/username or password.", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                Hide();
+                using (var dashboard = new Dashboard(user.Username))
+                {
+                    dashboard.ShowDialog();
+                }
+                Close();
+            }
+            catch (MySqlConnector.MySqlException exception)
+            {
+                MessageBox.Show(DatabaseSettings.DescribeConnectionError(exception), "Database connection error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                btnlogin.Enabled = true;
             }
         }
 

@@ -61,10 +61,10 @@
             pnlnav.Controls.Add(pnluserinfo);
             pnlnav.Dock = DockStyle.Left;
             pnlnav.Location = new Point(0, 0);
-            pnlnav.MaximumSize = new Size(227, 482);
+            pnlnav.MaximumSize = new Size(227, 800);
             pnlnav.MinimumSize = new Size(67, 482);
             pnlnav.Name = "pnlnav";
-            pnlnav.Size = new Size(227, 482);
+            pnlnav.Size = new Size(227, 695);
             pnlnav.TabIndex = 1;
             // 
             // btnExit
@@ -78,7 +78,7 @@
             btnExit.ForeColor = Color.White;
             btnExit.Image = (Image)resources.GetObject("btnExit.Image");
             btnExit.ImageAlign = ContentAlignment.MiddleLeft;
-            btnExit.Location = new Point(21, 417);
+            btnExit.Location = new Point(21, 638);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(183, 34);
             btnExit.TabIndex = 5;
@@ -207,7 +207,7 @@
             pnlmain.Dock = DockStyle.Fill;
             pnlmain.Location = new Point(227, 0);
             pnlmain.Name = "pnlmain";
-            pnlmain.Size = new Size(620, 482);
+            pnlmain.Size = new Size(1057, 695);
             pnlmain.TabIndex = 2;
             // 
             // label1
@@ -225,7 +225,7 @@
             pnlheader.Dock = DockStyle.Top;
             pnlheader.Location = new Point(227, 0);
             pnlheader.Name = "pnlheader";
-            pnlheader.Size = new Size(620, 41);
+            pnlheader.Size = new Size(1057, 41);
             pnlheader.TabIndex = 4;
             pnlheader.Paint += panel1_Paint;
             // 
@@ -241,7 +241,7 @@
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ButtonFace;
             BackgroundImageLayout = ImageLayout.Zoom;
-            ClientSize = new Size(847, 482);
+            ClientSize = new Size(1284, 695);
             Controls.Add(pnlheader);
             Controls.Add(pnlmain);
             Controls.Add(pnlnav);
