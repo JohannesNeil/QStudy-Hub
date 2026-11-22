@@ -71,7 +71,7 @@
             // 
             // btnlogin
             // 
-            btnlogin.BackColor = Color.FromArgb(70, 75, 113);
+            btnlogin.BackColor = Color.FromArgb(46, 63, 79);
             btnlogin.FlatStyle = FlatStyle.Flat;
             btnlogin.Font = new Font("Segoe UI Emoji", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnlogin.ForeColor = Color.White;
@@ -89,7 +89,7 @@
             btnsignin.FlatAppearance.BorderSize = 0;
             btnsignin.FlatStyle = FlatStyle.Flat;
             btnsignin.Font = new Font("Segoe UI Emoji", 7F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnsignin.ForeColor = Color.FromArgb(48, 175, 255);
+            btnsignin.ForeColor = Color.FromArgb(46, 63, 79);
             btnsignin.Location = new Point(171, 327);
             btnsignin.Name = "btnsignin";
             btnsignin.Size = new Size(65, 24);

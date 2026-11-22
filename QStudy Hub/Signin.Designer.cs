@@ -128,7 +128,7 @@
             // 
             pnlcontainer.BackColor = Color.FromArgb(46, 63, 79);
             pnlcontainer.Controls.Add(pictureBox1);
-            pnlcontainer.Location = new Point(115, 66);
+            pnlcontainer.Location = new Point(119, 50);
             pnlcontainer.Name = "pnlcontainer";
             pnlcontainer.Size = new Size(304, 381);
             pnlcontainer.TabIndex = 10;
@@ -304,12 +304,15 @@
             btnclose.BackgroundImageLayout = ImageLayout.None;
             btnclose.FlatAppearance.BorderSize = 0;
             btnclose.FlatStyle = FlatStyle.Flat;
-            btnclose.ForeColor = Color.FromArgb(192, 0, 0);
+            btnclose.Font = new Font("Segoe UI", 9.75F);
+            btnclose.ForeColor = Color.Black;
             btnclose.Image = (Image)resources.GetObject("btnclose.Image");
             btnclose.Location = new Point(8, 8);
             btnclose.Name = "btnclose";
-            btnclose.Size = new Size(25, 25);
+            btnclose.Size = new Size(64, 25);
             btnclose.TabIndex = 11;
+            btnclose.Text = "Back";
+            btnclose.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnclose.UseVisualStyleBackColor = true;
             btnclose.Click += btnclose_Click;
             // 
