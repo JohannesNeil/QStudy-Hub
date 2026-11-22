@@ -20,6 +20,11 @@ namespace QStudy_Hub
             int nWidthEllipse,
             int nHeightEllipse
         );
+        protected override void OnShown(EventArgs e)
+        {
+            base.OnShown(e);
+            this.ActiveControl = null;
+        }
 
         public Signin()
         {

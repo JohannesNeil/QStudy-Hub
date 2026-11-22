@@ -1,4 +1,8 @@
+using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace QStudy_Hub
 {
@@ -6,10 +10,31 @@ namespace QStudy_Hub
     {
         private readonly AuthenticationService authenticationService = new();
 
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+        (
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+        );
+
         public Login()
         {
             InitializeComponent();
             txtpass.UseSystemPasswordChar = true;
+        }
+        private void ApplyPanelRounding() // Custom panel edges
+        {
+            if (pnlLogin.Width > 0 && pnlLogin.Height > 0)
+            {
+                pnlLogin.Region = Region.FromHrgn(
+                    CreateRoundRectRgn(0, 0, pnlLogin.Width, pnlLogin.Height, 30, 30)
+                );
+            }
+
         }
 
         private async void btnlogin_Click(object sender, EventArgs e)
@@ -51,11 +76,6 @@ namespace QStudy_Hub
             }
         }
 
-        private void btnExit_Click(object sender, EventArgs e) //Exit Button
-        {
-            this.Close();
-        }
-
         private void btnsignin_Click(object sender, EventArgs e) //Direct to Signin form
         {
             this.Hide();
@@ -64,5 +84,9 @@ namespace QStudy_Hub
             this.Close();
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+            ApplyPanelRounding(); // Add Rounded Corners to the panel
+        }
     }
 }

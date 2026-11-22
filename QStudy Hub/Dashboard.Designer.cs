@@ -247,6 +247,7 @@
             Controls.Add(pnlnav);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Dashboard";
             StartPosition = FormStartPosition.CenterParent;
             Text = "QStudyHub";

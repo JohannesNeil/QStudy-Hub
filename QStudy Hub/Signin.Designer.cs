@@ -37,8 +37,6 @@
             pnlcontainer = new Panel();
             pictureBox1 = new PictureBox();
             btnsignin = new Button();
-            btnclose = new Button();
-            panel1 = new Panel();
             pnlfullname = new Panel();
             pbfullname = new PictureBox();
             pnl_fullname = new Panel();
@@ -54,9 +52,9 @@
             pnlnumber = new Panel();
             pbnumber = new PictureBox();
             pnl_number = new Panel();
+            btnclose = new Button();
             pnlcontainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel1.SuspendLayout();
             pnlfullname.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbfullname).BeginInit();
             pnlusername.SuspendLayout();
@@ -160,31 +158,6 @@
             btnsignin.UseVisualStyleBackColor = false;
             btnsignin.Click += btnsignin_Click;
             // 
-            // btnclose
-            // 
-            btnclose.BackgroundImageLayout = ImageLayout.None;
-            btnclose.Dock = DockStyle.Right;
-            btnclose.FlatAppearance.BorderSize = 0;
-            btnclose.FlatStyle = FlatStyle.Flat;
-            btnclose.ForeColor = Color.FromArgb(192, 0, 0);
-            btnclose.Image = (Image)resources.GetObject("btnclose.Image");
-            btnclose.Location = new Point(806, 0);
-            btnclose.Name = "btnclose";
-            btnclose.Size = new Size(41, 41);
-            btnclose.TabIndex = 11;
-            btnclose.UseVisualStyleBackColor = true;
-            btnclose.Click += btnclose_Click;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(btnclose);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(847, 41);
-            panel1.TabIndex = 12;
-            // 
             // pnlfullname
             // 
             pnlfullname.Controls.Add(pbfullname);
@@ -210,7 +183,7 @@
             pnl_fullname.BackColor = Color.Black;
             pnl_fullname.Location = new Point(0, 25);
             pnl_fullname.Name = "pnl_fullname";
-            pnl_fullname.Size = new Size(243, 3);
+            pnl_fullname.Size = new Size(243, 1);
             pnl_fullname.TabIndex = 15;
             // 
             // pnlusername
@@ -239,7 +212,7 @@
             pnl_username.BackColor = Color.Black;
             pnl_username.Location = new Point(0, 28);
             pnl_username.Name = "pnl_username";
-            pnl_username.Size = new Size(243, 3);
+            pnl_username.Size = new Size(243, 1);
             pnl_username.TabIndex = 1;
             // 
             // pnlemail
@@ -267,7 +240,7 @@
             pnl_email.BackColor = Color.Black;
             pnl_email.Location = new Point(0, 28);
             pnl_email.Name = "pnl_email";
-            pnl_email.Size = new Size(243, 3);
+            pnl_email.Size = new Size(243, 1);
             pnl_email.TabIndex = 15;
             // 
             // pnlpassword
@@ -295,7 +268,7 @@
             pnl_password.BackColor = Color.Black;
             pnl_password.Location = new Point(0, 28);
             pnl_password.Name = "pnl_password";
-            pnl_password.Size = new Size(243, 3);
+            pnl_password.Size = new Size(243, 1);
             pnl_password.TabIndex = 15;
             // 
             // pnlnumber
@@ -323,8 +296,22 @@
             pnl_number.BackColor = Color.Black;
             pnl_number.Location = new Point(0, 28);
             pnl_number.Name = "pnl_number";
-            pnl_number.Size = new Size(243, 3);
+            pnl_number.Size = new Size(243, 1);
             pnl_number.TabIndex = 15;
+            // 
+            // btnclose
+            // 
+            btnclose.BackgroundImageLayout = ImageLayout.None;
+            btnclose.FlatAppearance.BorderSize = 0;
+            btnclose.FlatStyle = FlatStyle.Flat;
+            btnclose.ForeColor = Color.FromArgb(192, 0, 0);
+            btnclose.Image = (Image)resources.GetObject("btnclose.Image");
+            btnclose.Location = new Point(8, 8);
+            btnclose.Name = "btnclose";
+            btnclose.Size = new Size(25, 25);
+            btnclose.TabIndex = 11;
+            btnclose.UseVisualStyleBackColor = true;
+            btnclose.Click += btnclose_Click;
             // 
             // Signin
             // 
@@ -332,22 +319,23 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(242, 242, 237);
             ClientSize = new Size(847, 482);
+            Controls.Add(btnclose);
             Controls.Add(btnsignin);
             Controls.Add(pnlnumber);
             Controls.Add(pnlpassword);
             Controls.Add(pnlemail);
             Controls.Add(pnlusername);
             Controls.Add(pnlfullname);
-            Controls.Add(panel1);
             Controls.Add(pnlcontainer);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Signin";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Signin";
+            Text = "QStudyHub";
             Load += Signin_Load;
             pnlcontainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel1.ResumeLayout(false);
             pnlfullname.ResumeLayout(false);
             pnlfullname.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbfullname).EndInit();
@@ -374,8 +362,6 @@
         private TextBox txtemail;
         private TextBox txtmobileno;
         private Panel pnlcontainer;
-        private Button btnclose;
-        private Panel panel1;
         private Panel pnlfullname;
         private Panel pnlusername;
         private Panel pnl_fullname;
@@ -393,5 +379,6 @@
         private PictureBox pbnumber;
         private Button btnsignin;
         private PictureBox pictureBox1;
+        private Button btnclose;
     }
 }

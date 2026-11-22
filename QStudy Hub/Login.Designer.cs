@@ -33,21 +33,22 @@
             txtpass = new TextBox();
             btnlogin = new Button();
             btnsignin = new Button();
-            pictureBox1 = new PictureBox();
-            label2 = new Label();
             panel1 = new Panel();
+            panel6 = new Panel();
             pbusername = new PictureBox();
             panel2 = new Panel();
             pbpassword = new PictureBox();
             panel3 = new Panel();
-            label3 = new Label();
             panel4 = new Panel();
-            btnExit = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pnlLogin = new Panel();
+            pictureBox4 = new PictureBox();
+            label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbusername).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbpassword).BeginInit();
+            pnlLogin.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // txtusername
@@ -74,7 +75,7 @@
             btnlogin.FlatStyle = FlatStyle.Flat;
             btnlogin.Font = new Font("Segoe UI Emoji", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnlogin.ForeColor = Color.White;
-            btnlogin.Location = new Point(59, 300);
+            btnlogin.Location = new Point(29, 288);
             btnlogin.Name = "btnlogin";
             btnlogin.Size = new Size(243, 26);
             btnlogin.TabIndex = 2;
@@ -89,7 +90,7 @@
             btnsignin.FlatStyle = FlatStyle.Flat;
             btnsignin.Font = new Font("Segoe UI Emoji", 7F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnsignin.ForeColor = Color.FromArgb(48, 175, 255);
-            btnsignin.Location = new Point(191, 332);
+            btnsignin.Location = new Point(171, 327);
             btnsignin.Name = "btnsignin";
             btnsignin.Size = new Size(65, 24);
             btnsignin.TabIndex = 3;
@@ -97,36 +98,23 @@
             btnsignin.UseVisualStyleBackColor = false;
             btnsignin.Click += btnsignin_Click;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImageLayout = ImageLayout.None;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(144, 57);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(98, 85);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Century Schoolbook", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.FromArgb(70, 75, 113);
-            label2.Location = new Point(98, 159);
-            label2.Name = "label2";
-            label2.Size = new Size(168, 27);
-            label2.TabIndex = 7;
-            label2.Text = "Welcome Back!";
-            // 
             // panel1
             // 
+            panel1.Controls.Add(panel6);
             panel1.Controls.Add(pbusername);
             panel1.Controls.Add(txtusername);
-            panel1.Location = new Point(59, 203);
+            panel1.Location = new Point(29, 208);
             panel1.Name = "panel1";
             panel1.Size = new Size(243, 34);
             panel1.TabIndex = 8;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.Black;
+            panel6.Location = new Point(0, 26);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(243, 3);
+            panel6.TabIndex = 11;
             // 
             // pbusername
             // 
@@ -144,7 +132,7 @@
             panel2.Controls.Add(pbpassword);
             panel2.Controls.Add(txtpass);
             panel2.Controls.Add(panel3);
-            panel2.Location = new Point(59, 243);
+            panel2.Location = new Point(29, 248);
             panel2.Name = "panel2";
             panel2.Size = new Size(243, 34);
             panel2.TabIndex = 9;
@@ -168,71 +156,75 @@
             panel3.Size = new Size(243, 3);
             panel3.TabIndex = 10;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Century Schoolbook", 7F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(103, 337);
-            label3.Name = "label3";
-            label3.Size = new Size(82, 15);
-            label3.TabIndex = 11;
-            label3.Text = "No Account Yet?";
-            // 
             // panel4
             // 
             panel4.BackColor = Color.Black;
-            panel4.Location = new Point(59, 227);
+            panel4.Location = new Point(29, 232);
             panel4.Name = "panel4";
             panel4.Size = new Size(243, 3);
             panel4.TabIndex = 11;
             // 
-            // btnExit
+            // pnlLogin
             // 
-            btnExit.BackColor = Color.Transparent;
-            btnExit.FlatAppearance.BorderSize = 0;
-            btnExit.FlatStyle = FlatStyle.Flat;
-            btnExit.Font = new Font("Segoe UI Emoji", 13F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnExit.ForeColor = Color.FromArgb(192, 0, 0);
-            btnExit.Image = (Image)resources.GetObject("btnExit.Image");
-            btnExit.Location = new Point(315, 12);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(32, 31);
-            btnExit.TabIndex = 12;
-            btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click;
+            pnlLogin.BackColor = Color.White;
+            pnlLogin.Controls.Add(btnsignin);
+            pnlLogin.Controls.Add(panel1);
+            pnlLogin.Controls.Add(panel2);
+            pnlLogin.Controls.Add(panel4);
+            pnlLogin.Controls.Add(btnlogin);
+            pnlLogin.Controls.Add(pictureBox4);
+            pnlLogin.Controls.Add(label1);
+            pnlLogin.Location = new Point(257, 49);
+            pnlLogin.Name = "pnlLogin";
+            pnlLogin.Size = new Size(304, 381);
+            pnlLogin.TabIndex = 13;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(-52, -124);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(416, 443);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 13;
+            pictureBox4.TabStop = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Schoolbook", 7F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(43, 332);
+            label1.Name = "label1";
+            label1.Size = new Size(131, 15);
+            label1.TabIndex = 11;
+            label1.Text = "Don't have an account yet?";
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnableAllowFocusChange;
-            BackColor = Color.White;
-            ClientSize = new Size(359, 444);
-            Controls.Add(btnExit);
-            Controls.Add(panel4);
-            Controls.Add(label3);
-            Controls.Add(btnlogin);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            Controls.Add(label2);
-            Controls.Add(pictureBox1);
-            Controls.Add(btnsignin);
+            BackColor = Color.FromArgb(242, 242, 237);
+            ClientSize = new Size(847, 482);
+            Controls.Add(pnlLogin);
             Font = new Font("Segoe UI Emoji", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            MinimizeBox = false;
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "QStudyHub";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Load += Login_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbusername).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbpassword).EndInit();
+            pnlLogin.ResumeLayout(false);
+            pnlLogin.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -241,15 +233,15 @@
         private TextBox txtpass;
         private Button btnlogin;
         private Button btnsignin;
-        private PictureBox pictureBox1;
-        private Label label2;
         private Panel panel1;
         private PictureBox pbusername;
         private Panel panel2;
         private PictureBox pbpassword;
         private Panel panel3;
-        private Label label3;
         private Panel panel4;
-        private Button btnExit;
+        private Panel pnlLogin;
+        private PictureBox pictureBox4;
+        private Label label1;
+        private Panel panel6;
     }
 }
