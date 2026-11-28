@@ -113,7 +113,7 @@
             panel6.BackColor = Color.Black;
             panel6.Location = new Point(0, 26);
             panel6.Name = "panel6";
-            panel6.Size = new Size(243, 3);
+            panel6.Size = new Size(243, 1);
             panel6.TabIndex = 11;
             // 
             // pbusername
@@ -153,7 +153,7 @@
             panel3.BackColor = Color.Black;
             panel3.Location = new Point(0, 24);
             panel3.Name = "panel3";
-            panel3.Size = new Size(243, 3);
+            panel3.Size = new Size(243, 1);
             panel3.TabIndex = 10;
             // 
             // panel4
